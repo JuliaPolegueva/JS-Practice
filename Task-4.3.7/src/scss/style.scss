@@ -1,0 +1,91 @@
+@import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 661px;
+  min-height: 763px;
+  background-color: #c4c4c4;
+  padding: 75px;
+
+  margin: auto;
+}
+
+.search {
+  margin-bottom: 10px;
+
+  &__input {
+    width: 500px;
+    height: 61px;
+    padding: 10px;
+    font-size: 48px;
+    border: 3px solid gray;
+  }
+}
+
+.repos{
+  margin-bottom: 45px;
+
+  &__item{
+    width: 500px;
+    min-height: 44px;
+    background-color: #E3E3E3;
+    border: 2px solid #000000;
+  }
+
+  &__name{
+    padding: 10px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  &__message{
+    font-size: 25px;
+  }
+}
+
+.repos-info{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 100px;
+  padding: 8px 10px;
+
+  background: #E27BEB;
+  border: 1px solid #000000;
+  font-size: 24px;
+  line-height: 28px;
+
+  &__btn{
+    position: relative;
+    right:-320px;
+    bottom:70px;
+    background-color: transparent;
+    width: 180px;
+    padding: 25px;
+
+    &::before,
+    &::after {
+      content: ""; 
+      position: absolute; 
+      width: 55px; 
+      height: 4px; 
+      background: #FF0000;
+    }
+    
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
