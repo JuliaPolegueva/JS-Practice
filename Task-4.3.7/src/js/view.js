@@ -43,12 +43,17 @@ export class View {
                                                <span class = "repos-info__owner">Owner: ${owner}</span>
                                                <span class = "repos-info__stars">Stars: ${stars}</span>
                                                <button class = "repos-info__btn"></button>`);
-
-    reposInfo.addEventListener('click', (event) => {
+   
+    function closeReposData(event){
       if(event.srcElement.className != "repos-info__btn") return;
-      reposInfo.remove();
-    });
+        reposInfo.remove();
+        removeEventListener('click', closeReposData);
+    }
+
+    reposInfo.addEventListener('click', closeReposData);
 
     this.app.append(reposInfo);
   }
+
+  
 }
